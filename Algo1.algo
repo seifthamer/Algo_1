@@ -1,0 +1,33 @@
+ALGORITHM Phrase 
+VAR
+    str : STRING :=[100]
+  
+    i : INTEGER
+
+      NBW , NBC , NBV : INTEGER := 0
+
+
+BEGIN
+    write("ecrire une phrase ")
+    read(str)    
+    WHILE (str(i) <> ".") DO
+        
+        NBC = NBC + 1
+
+        IF (str(i) = ("a" , "e" , "i" , "y" , "u" , "o") ) THEN
+            NBV = NBV +1
+        END_IF
+
+        IF (str(i) = " ") THEN
+            NBW = NBW +1
+        END_IF
+         
+        i++
+    END_WHILE
+
+    write(NBW)
+    write(NBC)
+    write(NBV)
+
+END
+
